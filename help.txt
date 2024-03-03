@@ -1,0 +1,13 @@
+$(document).on("keydown", function (e) {
+  if (!started) {
+    nextSequence();
+    $("h1").text("level " + level);
+    started = true;
+  }
+});
+
+function startOver() {
+  level = 0;
+  gamePattern = [];
+  started = false;
+}
